@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lxmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset=ISO-8859-1>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div
+		style="border: 1px solid #DDDDDD; width: 800px; font-family: Helvetica, Arial, sans-serif">
+		<div
+			style="height: 60px; width: 799px; background: linear-gradient(top, #fff, #ECECEC); background: -webkit-linear-gradient(top, #fff, #ECECEC); background: -moz-linear-gradient(top, #fff, #ECECEC); display: table-cell; vertical-align: middle; text-align: center">
+
+			<i><h1 style="color: #800000">ABC Bank</h1> <i> </i></i>
+		</div>
+		<div style="background-color: #dadada">
+			<center>
+				<table cellpadding="20" cellspacing="0" width=100%>
+					<tbody>
+						<tr>
+							<td><table cellpadding="10" cellspacing="10" height="200px"
+									width="100%" style="background-color: #fff; border-radius: 5px">
+									<tbody>
+										<tr>
+											<td style="color: #353535">
+												<p th:text="${RegisterServlet.name}">Dear + name+ lastname+ ,</p>
+												<p></p>
+												<h3 style="color: green; font-weight: bold">Account
+													details has been changed in ConfigWatcher</h3>
+												<h3 style="font-weight: bold">Here are the Details</h3>
+												<table style="text-align: left">
+													<tbody>
+														<tr th:each="message : ${messages}" >
+															<td>First Name</td>
+															<td th:text="${message.name}""></td>
+														</tr>
+														<tr th:each="message : ${messages}" >
+															<td>Last Name</td>
+															<td th:text="${message.lastname}"></td>
+														</tr>
+														<tr >
+															<td>Password</td>
+															<td>: + password</td>
+														</tr>
+														<tr th:each="message : ${messages}">
+															<td>Email Id</td>
+															<td>: <a href="" rel="noreferrer"
+																target="_blank" th:text="${message.email}"> </a></td>
+														</tr>
+														<tr>
+															<td>Contact Number</td>
+															<td>+ mobileno</td>
+														</tr>
+														<tr>
+															<td>Address</td>
+															<td>: + address</td>
+														</tr>
+														<tr>
+															<td>Company Name:</td>
+															<td>Avekshaa Technologies pvt ltd</td>
+														</tr>
+														<tr>
+															<th>Role</th>
+														</tr>
+														<tr>
+															<td>
+																<ul>
+																	<li>Software Engineer</li>
+																</ul>
+															</td>
+														</tr>
+														<tr>
+															<th colspan="2">You can login to ConfigWatcher using
+																below link and update your details</th>
+														</tr>
+														<tr>
+															<td><a
+																href=""
+																rel="noreferrer" target="_blank"
+																data-saferedirecturl="">ConfigWatcher</a></td>
+														</tr>
+													</tbody>
+												</table>
+												<p></p> <br> <br>- CW Support Team
+											</td>
+										</tr>
+									</tbody>
+								</table></td>
+						</tr>
+						<tr>
+							<td style="padding-top: 0px"><table cellpadding="10"
+									cellspacing="10" width="100%" style="border-radius: 5px">
+									<tbody>
+										<tr>
+											<td style="color: #4d4d4d; padding-top: 0px">
+												<center>Copyright © IndusInd Bank | Powered by
+													Avekshaa Technologies</center> <br> <b>Confidentiality
+													Note: </b>This message and any attachments may contain legally
+												privileged and/or confidential information.Any unauthorized
+												disclosure, use or dissemination of this e-mail message or
+												its contents, either in whole or in part,is prohibited. If
+												you are not the intended recipient of this e-mail message,
+												kindly notify the sender and then destroy it.
+											</td>
+										</tr>
+									</tbody>
+								</table>
+					</td>
+					</tr>
+					</tbody>
+				</table>
+			</center>
+		</div>
+		<div></div>
+		<div style="background-color: #dadada; height: 100%"></div>
+	</div>
+
+</body>
+</html>
